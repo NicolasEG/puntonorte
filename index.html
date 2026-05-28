@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punto Norte | Parrilla & Rotisería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="embers"></div>
+
+<header class="hero">
+
+    <button class="cart-btn" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+    </button>
+
+    <div class="hero-content">
+
+        <img src="assets/logo.png" class="hero-logo" alt="Punto Norte">
+
+        <div class="badge">🔥 MENÚ DIGITAL</div>
+
+        <h1>PARRILLA <span>&</span> ROTISERÍA</h1>
+
+        <p>
+            Sabores al fuego, pedidos rápidos y una experiencia moderna para tus clientes.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#menu" class="btn-primary">VER MENÚ</a>
+            <a href="#promos" class="btn-secondary">PROMOS</a>
+        </div>
+
+    </div>
+
+</header>
+
+<section class="promos" id="promos">
+    <div class="promo-card">
+        <h3>🔥 Promo Parrillada</h3>
+        <p>Parrillada para 2 + fritas</p>
+        <span>$48.000</span>
+    </div>
+
+    <div class="promo-card">
+        <h3>🍔 Combo Burger</h3>
+        <p>Hamburguesa completa + fritas</p>
+        <span>$7.000</span>
+    </div>
+
+    <div class="promo-card">
+        <h3>🍕 Pizza Especial</h3>
+        <p>Pizza especial para compartir</p>
+        <span>$14.000</span>
+    </div>
+</section>
+
+<section class="menu-section" id="menu">
+
+    <div class="section-title">
+        <h2>Sándwiches & Platos</h2>
+    </div>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <h3>Mila Napolitana c/ Fritas</h3>
+            <p>Crujiente, abundante y bien cargada.</p>
+            <div class="product-bottom">
+                <span>$14.000</span>
+                <button onclick="addToCart('Mila Napolitana c/ Fritas',14000)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <h3>Hamburguesa Completa</h3>
+            <p>Con fritas.</p>
+            <div class="product-bottom">
+                <span>$7.000</span>
+                <button onclick="addToCart('Hamburguesa Completa',7000)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <h3>Hamburguesa Bacon</h3>
+            <p>Con fritas.</p>
+            <div class="product-bottom">
+                <span>$7.000</span>
+                <button onclick="addToCart('Hamburguesa Bacon',7000)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <h3>Pollo a las Brasas</h3>
+            <p>Especial de la casa.</p>
+            <div class="product-bottom">
+                <span>$19.000</span>
+                <button onclick="addToCart('Pollo a las Brasas',19000)">Agregar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-title">
+        <h2>Empanadas</h2>
+    </div>
+
+    <div class="products-grid">
+
+        <div class="product-card"><h3>Empanada de Pollo</h3><p>Casera.</p><div class="product-bottom"><span>$2.000</span><button onclick="addToCart('Empanada de Pollo',2000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Empanada de Carne</h3><p>Bien rellena.</p><div class="product-bottom"><span>$2.000</span><button onclick="addToCart('Empanada de Carne',2000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Jamón y Queso</h3><p>Clásica.</p><div class="product-bottom"><span>$2.000</span><button onclick="addToCart('Empanada Jamón y Queso',2000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Carne Norteña</h3><p>Frita.</p><div class="product-bottom"><span>$2.000</span><button onclick="addToCart('Empanada Norteña',2000)">Agregar</button></div></div>
+
+    </div>
+
+    <div class="section-title">
+        <h2>Pizzas</h2>
+    </div>
+
+    <div class="products-grid">
+
+        <div class="product-card"><h3>Muzzarella</h3><p>Clásica.</p><div class="product-bottom"><span>$10.000</span><button onclick="addToCart('Pizza Muzzarella',10000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Especial</h3><p>La favorita.</p><div class="product-bottom"><span>$14.000</span><button onclick="addToCart('Pizza Especial',14000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Napolitana</h3><p>Tomate y ajo.</p><div class="product-bottom"><span>$16.000</span><button onclick="addToCart('Pizza Napolitana',16000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Cebolla</h3><p>Estilo parrilla.</p><div class="product-bottom"><span>$10.000</span><button onclick="addToCart('Pizza de Cebolla',10000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Rúcula</h3><p>Premium.</p><div class="product-bottom"><span>$14.000</span><button onclick="addToCart('Pizza de Rúcula',14000)">Agregar</button></div></div>
+
+    </div>
+
+    <div class="section-title">
+        <h2>Parrilla</h2>
+    </div>
+
+    <div class="products-grid">
+
+        <div class="product-card"><h3>Choripán</h3><p>Con chimichurri.</p><div class="product-bottom"><span>$3.500</span><button onclick="addToCart('Choripán',3500)">Agregar</button></div></div>
+        <div class="product-card"><h3>Parrillada para 2</h3><p>Incluye fritas.</p><div class="product-bottom"><span>$48.000</span><button onclick="addToCart('Parrillada para 2',48000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Asado Porción</h3><p>Cocción lenta.</p><div class="product-bottom"><span>$15.000</span><button onclick="addToCart('Asado Porción',15000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Vacío Porción</h3><p>Al carbón.</p><div class="product-bottom"><span>$16.000</span><button onclick="addToCart('Vacío Porción',16000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Chinchulín</h3><p>Bien crocante.</p><div class="product-bottom"><span>$8.000</span><button onclick="addToCart('Chinchulín',8000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Riñón</h3><p>Especialidad.</p><div class="product-bottom"><span>$8.000</span><button onclick="addToCart('Riñón',8000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Morcilla</h3><p>Tradicional.</p><div class="product-bottom"><span>$8.000</span><button onclick="addToCart('Morcilla',8000)">Agregar</button></div></div>
+        <div class="product-card"><h3>Papas Fritas</h3><p>Porción grande.</p><div class="product-bottom"><span>$6.000</span><button onclick="addToCart('Papas Fritas',6000)">Agregar</button></div></div>
+
+    </div>
+
+</section>
+
+<div class="cart" id="cart">
+    <div class="cart-header">
+        <h2>Tu Pedido</h2>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div class="cart-footer">
+        <div class="total">
+            TOTAL: <span id="cart-total">$0</span>
+        </div>
+
+        <button class="checkout-btn">
+            Finalizar Pedido
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
